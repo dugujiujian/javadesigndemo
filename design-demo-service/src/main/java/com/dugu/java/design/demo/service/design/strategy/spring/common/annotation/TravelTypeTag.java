@@ -1,6 +1,6 @@
-package com.dugu.java.design.demo.service.design.strategy.common.annotation;
+package com.dugu.java.design.demo.service.design.strategy.spring.common.annotation;
 
-import com.dugu.java.design.demo.service.design.strategy.common.enums.TravelTypeEnum;
+import com.dugu.java.design.demo.service.design.strategy.spring.common.enums.TravelTypeEnum;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

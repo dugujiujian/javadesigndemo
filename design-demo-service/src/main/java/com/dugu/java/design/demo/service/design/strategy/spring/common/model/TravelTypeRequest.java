@@ -1,4 +1,4 @@
-package com.dugu.java.design.demo.service.design.strategy.common.model;
+package com.dugu.java.design.demo.service.design.strategy.spring.common.model;
 
 import lombok.Getter;
 import lombok.Setter;

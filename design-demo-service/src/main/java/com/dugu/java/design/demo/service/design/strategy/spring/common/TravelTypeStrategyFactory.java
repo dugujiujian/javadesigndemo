@@ -1,7 +1,7 @@
-package com.dugu.java.design.demo.service.design.strategy.common;
+package com.dugu.java.design.demo.service.design.strategy.spring.common;
 
-import com.dugu.java.design.demo.service.design.strategy.common.annotation.TravelTypeTag;
-import com.dugu.java.design.demo.service.design.strategy.common.enums.TravelTypeEnum;
+import com.dugu.java.design.demo.service.design.strategy.spring.common.annotation.TravelTypeTag;
+import com.dugu.java.design.demo.service.design.strategy.spring.common.enums.TravelTypeEnum;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.ApplicationContext;
@@ -19,7 +19,7 @@ import java.util.Map;
 @Component
 public class TravelTypeStrategyFactory implements ApplicationContextAware, InitializingBean {
 
-    private static Map<TravelTypeEnum, TravelTypeBizHandlerStragety> travelTypeMap = new HashMap<>();
+    private static Map<TravelTypeEnum, TravelTypeBizHandlerStrategy> travelTypeMap = new HashMap<>();
 
     private ApplicationContext applicationContext;
 
@@ -30,9 +30,9 @@ public class TravelTypeStrategyFactory implements ApplicationContextAware, Initi
 
     @Override
     public void afterPropertiesSet() {
-        Map<String, TravelTypeBizHandlerStragety> taskMessageHandlerTypeMap = applicationContext.getBeansOfType(TravelTypeBizHandlerStragety.class);
+        Map<String, TravelTypeBizHandlerStrategy> taskMessageHandlerTypeMap = applicationContext.getBeansOfType(TravelTypeBizHandlerStrategy.class);
         taskMessageHandlerTypeMap.forEach((k, handler) -> {
-            Class<? extends TravelTypeBizHandlerStragety> aClass = handler.getClass();
+            Class<? extends TravelTypeBizHandlerStrategy> aClass = handler.getClass();
             TravelTypeTag annotation = aClass.getAnnotation(TravelTypeTag.class);
             if (annotation != null) {
                 TravelTypeEnum[] bizTypes = annotation.values();
@@ -50,8 +50,8 @@ public class TravelTypeStrategyFactory implements ApplicationContextAware, Initi
      * @param travelTypeEnum
      * @return
      */
-    public TravelTypeBizHandlerStragety getInstance(TravelTypeEnum travelTypeEnum) {
-        TravelTypeBizHandlerStragety handler = travelTypeMap.get(travelTypeEnum);
+    public TravelTypeBizHandlerStrategy getInstance(TravelTypeEnum travelTypeEnum) {
+        TravelTypeBizHandlerStrategy handler = travelTypeMap.get(travelTypeEnum);
         if (handler == null) {
             return null;
         }

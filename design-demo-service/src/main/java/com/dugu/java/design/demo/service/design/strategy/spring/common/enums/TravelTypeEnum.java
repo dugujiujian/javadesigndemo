@@ -1,4 +1,4 @@
-package com.dugu.java.design.demo.service.design.strategy.common.enums;
+package com.dugu.java.design.demo.service.design.strategy.spring.common.enums;
 
 /**
  * @Description TODO
