@@ -1,11 +1,9 @@
-package com.dugu.java.design.demo.service.design.strategy.spring;
+package com.dugu.java.design.demo.service.design.strategy.spring.traveltype;
 
-import com.dugu.java.design.demo.service.design.strategy.spring.common.TravelTypeBizHandlerStrategy;
-import com.dugu.java.design.demo.service.design.strategy.spring.common.TravelTypeStrategyFactory;
 import com.dugu.java.design.demo.service.design.strategy.spring.common.enums.TravelTypeEnum;
 import com.dugu.java.design.demo.service.design.strategy.spring.common.model.TravelTypeRequest;
-import com.dugu.java.design.demo.service.design.strategy.spring.handler.CarTravelTypeStrategy;
-import com.dugu.java.design.demo.service.design.strategy.spring.handler.PlaneTravelTypeStrategy;
+import com.dugu.java.design.demo.service.design.strategy.spring.traveltype.handler.CarTravelTypeStrategy;
+import com.dugu.java.design.demo.service.design.strategy.spring.traveltype.handler.PlaneTravelTypeStrategy;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,4 +1,4 @@
-package com.dugu.java.design.demo.service.design.strategy.spring.common;
+package com.dugu.java.design.demo.service.design.strategy.spring.traveltype;
 
 import com.dugu.java.design.demo.service.design.strategy.spring.common.annotation.TravelTypeTag;
 import com.dugu.java.design.demo.service.design.strategy.spring.common.enums.TravelTypeEnum;
