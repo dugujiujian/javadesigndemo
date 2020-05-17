@@ -17,8 +17,8 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
 /**
- * @Description TODO
- * @Author by zhangliping
+ * @Description 策略模式测试代码
+ * @Author by cihun
  * @Date 2020/5/17 12:36 AM
  */
 @ContextConfiguration(classes = TravelTypeStrategyTest.Config.class)
